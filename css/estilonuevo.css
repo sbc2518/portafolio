@@ -1,0 +1,626 @@
+/*144px*/
+
+* {
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+.body {
+   margin: 0 !important;
+
+}
+p {
+    font-weight: 200;
+    font-size: 16px;
+}
+.container{
+    width: 960px;
+   margin: 0px auto 0px;
+/*    si se ve un espacio superior -17px*/
+}
+.pn {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    background-color: #000;
+}
+
+.pn a > .puntob {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    z-index: 3;
+    margin: 50vh auto 0;
+    animation-duration: 3s;
+    animation-name: slidein;
+    -webkit-animation: slidein 3s;
+    /* Safari 4.0 - 8.0 */
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+.reticula {
+    background-image: url(../img/reticula.png);
+    background-repeat: round;
+    position: relative;
+    z-index: 2;
+    width: 300px;
+    height: 300px;
+    bottom: 100px;
+    right: 100px;
+    display: none;
+}
+
+.puntob:hover .reticula {
+    display: block;
+    animation-duration: 1s;
+    -webkit-animation: mymove 1s;
+    /* Safari 4.0 - 8.0 */
+    animation: mymove 1s;
+}
+
+/*animacion punto blanco con reticula */
+
+@keyframes mymove {
+    0% {
+        filter: blur(10px) opacity(0%)
+    }
+    100% {
+        filter: blur(0px) opacity(100%)
+    }
+}
+
+
+@keyframes slidein {
+    0% {
+        margin-left: 50%;
+    }
+    25% {
+        margin-right: 40%;
+    }
+    75% {
+        margin-left: 40%;
+    }
+    100% {
+        margin-left: 50%;
+    }
+}
+
+.left {
+    width: 100%;
+    background-color: #000;
+    z-index: 1000;
+    position: absolute;
+}
+
+header {
+    background-color: #000;
+    top: 0;
+    width: 960px;
+    display: -webkit-flex;
+    /*safari*/
+    -webkit-flex-direction: row;
+    /* Safari 6.1+ */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px auto;
+}
+
+.logo {
+    margin: 10px;
+    width: 10%;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.menul ul {
+    width: 960px;
+    display: -webkit-flex;
+    /*safari*/
+    -webkit-flex-direction: row;
+    /* Safari 6.1+ */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px auto;
+}
+
+.menul ul a {
+    padding: 0px 50px;
+    list-style: circle;
+    text-decoration-line: none;
+    color: #fff;
+}
+
+.menul ul a li,
+.menur ul a li {
+    font-size: 1.7em;
+    font-weight: 700;
+}
+
+.imagenes {
+    margin: 0px auto;
+    width: 960px;
+    display: flex;
+    display: -webkit-flex;
+    /*safari*/
+    -webkit-flex-direction: row;
+    /* Safari 6.1+ */
+    height: 800px;
+}
+
+.web,
+.branding,
+.empaques,
+.yo {
+    width: 20%;
+    margin: 0px;
+
+}
+
+.web {
+    z-index: 1;
+    order: 1;
+    flex-grow: 5;
+    background: linear-gradient(to right, #000, #17b0ed);
+
+
+}
+
+.branding {
+    z-index: 2;
+    order: 2;
+    flex-grow: 5;
+    background: linear-gradient(to right, #17b0ed, #efcbce);
+    overflow: hidden;
+}
+
+.empaques {
+    z-index: 3;
+    order: 3;
+    flex-grow: 5;
+    background: linear-gradient(to right, #efcbce, #ef3615);
+    overflow: hidden;
+}
+
+.yo {
+    z-index: 4;
+    order: 4;
+    flex-grow: 5;
+    width: 20%;
+    background: linear-gradient( to right, #ef3615, #000);
+    overflow: hidden;
+
+}
+
+.abgy {
+    margin: 100px 0px 0px;
+}
+
+.abgy h2 {
+    font-weight: 100;
+    color: #fff;
+    font-size: 400px;
+    margin: 0px 0px 0px 20px;
+    text-align: right;
+    position: absolute;
+
+}
+
+.abgy h3 {
+    font-weight: 700;
+    color: #fff;
+    font-size: 2em;
+    margin: 500px 0px 0px 50px;
+    text-align: left;
+    position: absolute;
+    overflow: visible;
+}
+
+/*inicio formulario*/
+
+.formulario {
+    width: 100%;
+    margin:50px auto ;
+    padding-left: 20%;
+}
+
+.formulario h2 {
+    width: 60%;
+    list-style: circle;
+    
+}
+.formulario ul li  {
+    list-style: none;
+    padding: 10px 0px ;
+    display: flex;
+    flex: row wrap;
+    
+    justify-content:flex-start;
+    text-align: center
+}
+.pg-botom{
+    background-image: url(../img/grafica-cirulo.svg);
+     font-size: 18px;
+    background-repeat: no-repeat;
+    padding:  0  0 0 30px;
+}
+.pg-botom2{
+    background-image: url(../img/grafica-cirulo.svg);
+     width: 24px;
+    height: 24px;
+    margin-top: 30px;
+    background-repeat: no-repeat;
+    
+}
+.formulario ul li input {
+    list-style: none;
+    border-radius: 20px;
+    width: 20%;
+    border: 1px solid ;
+    margin-left:20px;
+  
+}
+textarea{
+    text-align: center;
+    margin-left: 20px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+.submit,.restablecer{
+    margin-top: 20px;
+    margin-left: 45px;
+     background-color: #fff;
+ border-radius: 20px;
+   padding: 10px 20px  ;
+}
+.restablecer{
+    background-color: #fff;
+    border: 1px solid #ef3615;
+    color: #ef3615;
+    float: left;
+   
+}
+.submit{
+     background-color: #fff;
+    border: 1px solid #17b0ed;
+    color: #17b0ed;
+ 
+   
+}
+/*fin formulario*/
+
+/*footer*/
+
+.rigth {
+    width: 100%;
+    background-color: #000;
+    z-index: 5;
+    display: block;
+    top: 0px;
+    
+}
+
+.menur {
+    padding: 10px 0px;
+    z-index: 5;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    display: inline-flex;
+}
+
+.menur ul {
+    width: 960px;
+    display: -webkit-flex;
+    /*safari*/
+    -webkit-flex-direction: row;
+    /* Safari 6.1+ */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px auto;
+    bottom: 0px;
+}
+
+.menur ul a {
+    list-style: circle;
+    text-decoration-line: none;
+    color: #fff;
+}
+
+
+
+/*end footer*/
+
+/*footer*/
+
+.co1,
+.co2 .co3 .co4 .co5 {
+    font-size: 12px;
+    font-weight: 200;
+    color: #fff;
+}
+
+
+.co2 {
+    color: #efcbce;
+}
+
+.co3 {
+    color: #ef3615;
+}
+
+.co4 {
+    color: #17b0ed
+}
+
+.co5 {
+    color: #000;
+}
+
+
+/* proyecto iluminar*/
+
+
+
+.descrip {
+    /* The image used */
+    background-image: url("../img/ilu-DSC04253.JPG");
+    position: absolute;
+    /* Set a specific height */
+     width:  960px;
+    background-repeat:  no-repeat round;
+    height:800px;    
+    z-index: 1;
+    float: left;
+    /* Create the parallax scrolling effect */
+
+}
+
+ .tite  {
+
+    color: #efcbce;
+    background-color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    box-shadow: 0 0 #efcbce;
+    border-radius: 50px;
+    border: 1px solid #efcbce;
+     text-align: center;
+     width: 50%;
+     margin:  25% auto 0px;
+}
+
+.intro {
+     z-index: 5;
+    top:470px;
+    position: relative;
+    width: 45%;
+    text-align: justify;
+    background-color: rgba(255, 255, 255, 80%);
+    padding: 20px ;
+   
+  
+}
+
+.intro h3 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 3.125em;
+}
+
+.ilu-con {
+      
+    top:470px;
+    position: relative;
+    width: 100%;
+    margin-top: 0px;
+     display: flex;
+    justify-content: space-around;
+    align-items: center;
+ }
+.ilu-con-text{
+    width: 55%;
+margin: 0 0 0 20px;
+}
+/*ANIMACION PARALLAX DIDENTIFICADOR ILUMINAR*/
+
+.ilu-i1 {
+   margin: 50px 0px 50px 20px;
+    width:100%;
+}
+.ilu-i1 img {
+width: 100%;
+}
+
+.ilu-i1 img:hover {
+    background-image: url(../img/ilu-identificador-rejilla.png)
+}
+
+/*FIN DE ANIMACION*/
+
+
+
+
+.descrip-tex2 {
+
+    margin: 500px 0px 0px;
+    width: 60%;
+;
+}
+
+.descrip-tex2 h3 {
+
+    font-weight: 400;
+    font-size: 50px;
+    color: #000;
+}
+
+.ilu-con-grafic {
+    margin-top: 20px;
+    width: 960px;
+    display: block;
+    justify-content: space-around;
+    align-content: center;
+}
+
+
+.ilu-con-grafic h6 {
+    margin: 10px 100px 0px;
+    font-size: 40px;
+    font-weight: 400;
+    color: #efcbce;
+    float: left;
+}
+
+.grafic-obre,
+.grafic-ing,
+.grafic-gerentes {
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    height: 80px;
+    margin: 0px 0px 50px 320px;
+}
+
+.grafic-obre {
+    background-image: url(../img/ilu-obre.png);
+}
+
+.grafic-ing {
+    background-image: url(../img/ilu-ing.png);
+}
+
+.grafic-gerentes {
+    background-image: url(../img/ilu-gerentes.png);
+}
+
+
+
+
+
+/*parque chingaza*/
+
+.descrip2 {
+    width: 820px;
+    display: flex;
+}
+
+.descrip2 .chin-p img {
+
+    position: absolute;
+    top: 0%;
+    width: 864px;
+    display: block;
+
+
+}
+
+.chin-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #efcbce;
+    padding: 18px;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    box-shadow: 0 0 #efcbce;
+    border-radius: 50px;
+    border: 1px solid #efcbce;
+    margin: 50px 0px 0px 180px;
+    width: 500px;
+}
+
+.ch-t,
+.ch-t2 {
+    font-weight: 400;
+    font-size: 50px;
+    color: #000;
+    position: absolute;
+
+
+}
+
+.ch-t {
+    margin: 620px 0px 0px 95px;
+}
+
+.ch-con {
+    margin: 700px 10px 0px 95px;
+    width: 770px;
+    display: flex;
+    flex: row wrap;
+    position: absolute;
+    text-align: justify;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.ch-con p {
+    width: 400px;
+    margin: 0px 20px;
+
+}
+
+.ch-con .ch-concept {
+    margin: -80px 0px 0px 20px;
+    width: 250px;
+
+}
+
+.ch-identificadores {
+    margin: 1000px 10px 0px 95px;
+    width: 770px;
+    display: inline;
+    flex: row wrap;
+    background-attachment: fixed;
+    justify-content: space-around;
+    align-content: center;
+    position: absolute;
+}
+
+.chi-dent {
+    background-image: url(../img/ch-identificador.png.png);
+    width: 100%;
+    height: 100%;
+    position: absolute margin-top: 500px;
+
+}
+
+
+.chi-dent:hover + .chi-dent2 {
+    display: block;
+}
+
+.chi-dent2 {
+    border-image: url(../img/ch-identificador-bl_1.png);
+    position: absolute;
+    display: none;
+    margin: -465px 0px 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.ch-t2 {
+    margin: 1600px 0px 0px 285px;
+}
+
+
+.ch-t2-mages {
+    background-color: #000;
+    ma
+}
+
+
